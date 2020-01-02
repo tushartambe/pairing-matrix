@@ -4,23 +4,68 @@
     <title>Points evenly spaced on a circle</title>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <script src="https://d3js.org/d3.v3.min.js" charset="utf-8"></script>
+<!--    <script type="text/javascript" src="http://mbostock.github.com/d3/d3.js"></script>-->
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/underscore.js/1.9.1/underscore.js">
     </script>
     <script language="javascript" src="main.js"></script>
     <script language="javascript" src="matrix.js"></script>
+    <script language="javascript" src="table.js"></script>
 
     <style type="text/css">
         svg {
             height: 800px;
             width: 100%;
         }
+
+        #pairing_table {
+            width: fit-content;
+            min-width: 500px;
+            height: fit-content;
+            min-height: 250px;
+            margin-left: 20px;
+            background-color: cyan;
+        }
+
+        .showbtn {
+            margin: 20px;
+            width: fit-content;
+            height: 30px;
+            background-color: rgb(100, 147, 248);
+            font-size: 16px;
+            border-radius: 5%;
+        }
+
+        table, th, td {
+            border: 1px solid black;
+            border-collapse: collapse;
+            text-align: center;
+            width: fit-content;
+        }
+
+        td{
+            padding-top: 0;
+            margin: 0;
+            height: fit-content;
+        }
+
+        body {
+            display: flex;
+        }
     </style>
 </head>
 
 <body>
+    <div>
+        <table id="pairing_table" width="400px" height="180px" class="skinny" cellspacing="0" cellpadding="0">
+                <thead></thead>
+                <tbody></tbody>
+        </table>
+        <button id="go" class="showbtn">
+            Show Graphics
+        </button>
+    </div>
     <svg>
         <g class="area">
-
         </g>
     </svg>
 </body>
